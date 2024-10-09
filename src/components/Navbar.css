@@ -1,0 +1,97 @@
+/* General styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --warna-premier: #229799;
+    --warna-sekunder: #f5f5f5;
+    --warna-putih2: #ffffff;
+    --warna-tersier: #48cfcb;
+    --warna-button: #427898;
+    --warna-text: #000000;
+    --warana-kuning: #f5bd41;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar styles */
+.bg-header {
+  background-color: var(--warna-putih2); /* White background */
+  border-bottom: 1px solid #ddd; /* Border for separation */
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Positions logo and buttons at opposite sides */
+  align-items: center;
+  width: 100%;
+}
+
+/* Container for navbar elements */
+.container {
+  display: flex;
+  justify-content: space-between; /* Distributes space between children */
+  align-items: center;
+  max-width: 1200px; /* Maximum width */
+  margin: 0 auto; /* Centering the container */
+  padding: 0 20px; /* Padding on sides */
+}
+
+/* Logo on the left */
+.navbar-brand {
+  margin-right: 200px; /* Space between logo and navbar */
+}
+
+.logo-img {
+  height: 50px; /* Logo height */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Navbar in the center */
+.navbar-nav {
+  display: flex;
+  justify-content: center; /* Center the navbar items */
+  align-items: center; /* Align items vertically */
+  list-style: none; /* Remove default list styles */
+  gap: 20px; /* Space between navbar items */
+}
+
+/* Spacing for the Login and Register buttons */
+ul.navbar-nav.ms-auto {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  align-items: center;
+  gap: 10px; /* Space between buttons */
+}
+
+/* Add margin to the first button to create space */
+.ms-auto .nav-item:first-child {
+  margin-left: 150px; /* Jarak 100px untuk tombol Login dari item navbar sebelumnya */
+}
+
+/* Navbar links and buttons styles */
+.nav-link {
+  color: var(--warna-text); /* Link color */
+  font-size: 16px; /* Font size */
+  font-weight: 500; /* Font weight */
+  text-decoration: none; /* Remove underline */
+}
+
+.login-navbar, .register-navbar {
+  background-color: var(--warna-button); /* Button background color */
+  color: var(--warna-putih2); /* Button text color */
+  border-radius: 5px; /* Rounded corners */
+  padding: 8px 16px; /* Padding */
+  text-decoration: none; /* Remove underline */
+  font-weight: 600; /* Font weight */
+}
+
+.login-navbar:hover, .register-navbar:hover {
+  background-color: var(--warna-premier); /* Hover color */
+}
+
