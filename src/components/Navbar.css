@@ -20,78 +20,92 @@
 
 /* Navbar styles */
 .bg-header {
-  background-color: var(--warna-putih2); /* White background */
-  border-bottom: 1px solid #ddd; /* Border for separation */
-  padding: 10px 0;
+    background-color: var(--warna-putih2); /* White background */
+    border-bottom: 1px solid #ddd; /* Border for separation */
+    padding: 10px 0;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between; /* Positions logo and buttons at opposite sides */
-  align-items: center;
-  width: 100%;
+    display: flex;
+    justify-content: space-between; /* Positions logo and buttons at opposite sides */
+    align-items: center;
+    width: 100%;
 }
 
 /* Container for navbar elements */
 .container {
-  display: flex;
-  justify-content: space-between; /* Distributes space between children */
-  align-items: center;
-  max-width: 1200px; /* Maximum width */
-  margin: 0 auto; /* Centering the container */
-  padding: 0 20px; /* Padding on sides */
+    display: flex;
+    justify-content: space-between; /* Distributes space between children */
+    align-items: center;
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Centering the container */
 }
 
 /* Logo on the left */
 .navbar-brand {
-  margin-right: 200px; /* Space between logo and navbar */
+    margin-right: 200px; /* Space between logo and navbar */
 }
 
 .logo-img {
-  height: 50px; /* Logo height */
-  width: auto; /* Maintain aspect ratio */
+    height: 50px; /* Logo height */
+    width: auto; /* Maintain aspect ratio */
 }
 
-/* Navbar in the center */
-.navbar-nav {
-  display: flex;
-  justify-content: center; /* Center the navbar items */
-  align-items: center; /* Align items vertically */
-  list-style: none; /* Remove default list styles */
-  gap: 20px; /* Space between navbar items */
+/* Navbar Links */
+.navbar-nav .nav-link {
+    font-weight: 500; /* Bold font for menu */
+    color: #4a4a4a; /* Menu text color */
+    padding: 10px 15px; /* Padding for menu */
+    text-decoration: none; /* Remove underline */
 }
 
-/* Spacing for the Login and Register buttons */
-ul.navbar-nav.ms-auto {
+.navbar-nav .nav-link:hover {
+    color: var(--warna-premier); /* Color on hover */
+}
+
+/* User Button */
+.user-button {
   display: flex;
-  justify-content: flex-end; /* Align buttons to the right */
   align-items: center;
-  gap: 10px; /* Space between buttons */
+  background-color: var(--warna-button);
+  color: var(--warna-putih2);
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
 }
 
-/* Add margin to the first button to create space */
-.ms-auto .nav-item:first-child {
-  margin-left: 150px; /* Jarak 100px untuk tombol Login dari item navbar sebelumnya */
+.user-button:hover {
+  background-color: var(--warna-premier);
 }
 
-/* Navbar links and buttons styles */
-.nav-link {
-  color: var(--warna-text); /* Link color */
-  font-size: 16px; /* Font size */
-  font-weight: 500; /* Font weight */
-  text-decoration: none; /* Remove underline */
+/* Profile Dropdown */
+.profile-dropdown {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 1;
 }
 
-.login-navbar, .register-navbar {
-  background-color: var(--warna-button); /* Button background color */
-  color: var(--warna-putih2); /* Button text color */
-  border-radius: 5px; /* Rounded corners */
-  padding: 8px 16px; /* Padding */
-  text-decoration: none; /* Remove underline */
-  font-weight: 600; /* Font weight */
+.profile-dropdown .dropdown-item {
+  padding: 10px 20px;
+  color: #333;
+  text-decoration: none;
+  display: block;
 }
 
-.login-navbar:hover, .register-navbar:hover {
-  background-color: var(--warna-premier); /* Hover color */
+.profile-dropdown .dropdown-item:hover {
+  background-color: #f0f0f0;
 }
 
+
+/* User Photo */
+.user-photo {
+    border-radius: 50%; /* Make user photo circular */
+    width: 30px; /* User photo size */
+    height: 30px; /* User photo size */
+    margin-right: 10px; /* Space between photo and name */
+}
